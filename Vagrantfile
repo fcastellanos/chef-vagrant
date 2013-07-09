@@ -27,26 +27,12 @@ Vagrant.configure("2") do |config|
 
   config.vm.provision :chef_solo do |chef|
     chef.cookbooks_path = 'chef/cookbooks'
-    chef.roles_path     = 'chef/roles'
+
     chef.add_recipe 'apt'
     chef.add_recipe 'git'
     chef.add_recipe 'build-essential'
     chef.add_recipe 'ruby_build'
     chef.add_recipe 'rbenv'
-
-    chef.json = {
-      'rbenv' => {
-        'global' => '1.9.3-p194',
-        'rubies' => [ '1.9.3-p194' ],
-        'gems'   => {
-          '1.9.3-p194' => [
-            { 'name'   => 'bundler' }
-          ]
-        }
-      }
-    }
-
-    # chef.add_role 'ruby'
   end
 
   # config.vm.provision :shell, :path => 'vagrant_scripts/after_script.sh'

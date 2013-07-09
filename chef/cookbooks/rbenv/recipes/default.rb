@@ -82,3 +82,5 @@ end
     action [:create]
   end
 end
+
+rbenv_ruby "1.9.3-p194"
