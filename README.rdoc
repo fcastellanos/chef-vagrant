@@ -1,0 +1,9 @@
+== README
+
+This is an example app of how to use vagrant + chef.
+
+The goal of the project is just to do
+
+'vagrant up'
+
+and provide the vagrant box with all of the necessary chef recipes to have a running rails 4.x + ruby 2.x app
