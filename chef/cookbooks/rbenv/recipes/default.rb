@@ -83,4 +83,7 @@ end
   end
 end
 
-rbenv_ruby "1.9.3-p194"
+rbenv_ruby "2.0.0-p247" do
+  ruby_version "2.0.0-p247"
+  global true
+end
