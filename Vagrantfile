@@ -29,11 +29,12 @@ Vagrant.configure("2") do |config|
     chef.cookbooks_path = 'chef/cookbooks'
 
     chef.add_recipe 'apt'
+    chef.add_recipe 'sqlite-dev'
     chef.add_recipe 'git'
     chef.add_recipe 'build-essential'
     chef.add_recipe 'ruby_build'
     chef.add_recipe 'rbenv'
   end
 
-  # config.vm.provision :shell, :path => 'vagrant_scripts/after_script.sh'
+  config.vm.provision :shell, :path => 'vagrant_scripts/after_script.sh'
 end
